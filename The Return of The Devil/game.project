@@ -1,6 +1,7 @@
 [project]
 title = The Return of The Devil
 dependencies#0 = https://github.com/rgrams/rendercam/archive/v1.0.1.zip
+dependencies#1 = https://github.com/Insality/defold-printer/archive/master.zip
 
 [bootstrap]
 main_collection = /game/game.collectionc
@@ -9,10 +10,6 @@ render = /rendercam/rendercam.renderc
 [input]
 game_binding = /input/game.input_bindingc
 use_accelerometer = 0
-
-[display]
-width = 960
-height = 640
 
 [ios]
 app_icon_120x120 = /assets/app_icons/icon_120.png
@@ -44,4 +41,7 @@ shared_state = 1
 [physics]
 gravity_y = -1000.0
 scale = 0.01
+
+[tilemap]
+max_tile_count = 8192
 

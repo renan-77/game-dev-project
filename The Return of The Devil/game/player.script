@@ -20,14 +20,15 @@ local input_right = hash("Right")
 local input_jump = hash("Jump")
 local anim_walk = hash("walk_right")
 local anim_idle = hash("stand")
-local anim_jump = hash("jump")
-local anim_fall = hash("jump")
+local anim_jump = hash("walk_right")
+local anim_fall = hash("walk_right")
 
 
 function init(self)
 	-- this lets us handle input in this script
+	
 	msg.post(".", "acquire_input_focus")
-
+	msg.post("#sound", "play_sound")
 	-- activate camera attached to the player collection
 	-- this will send camera updates to the render script
 	msg.post("camera", "acquire_camera_focus")
@@ -40,6 +41,8 @@ function init(self)
 	self.ground_contact = false
 	-- the currently playing animation
 	self.anim = nil
+
+
 end
 
 local function play_animation(self, anim)
