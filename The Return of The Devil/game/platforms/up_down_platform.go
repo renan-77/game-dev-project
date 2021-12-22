@@ -1,6 +1,6 @@
 components {
-  id: "player"
-  component: "/game/scripts/player.script"
+  id: "collision"
+  component: "/game/scripts/collision.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,14 +16,14 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/assets/sprites/jerimiah.atlas\"\n"
-  "default_animation: \"jump\"\n"
+  data: "tile_set: \"/assets/sprites/platforms/up_down_platform.atlas\"\n"
+  "default_animation: \"move\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
-    x: 666.0
-    y: 306.0
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
@@ -41,15 +41,14 @@ embedded_components {
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"player\"\n"
-  "mask: \"ground\"\n"
-  "mask: \"platform\"\n"
+  "group: \"platform\"\n"
+  "mask: \"player\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
-  "      x: 666.0\n"
-  "      y: 307.0\n"
+  "      x: 0.0\n"
+  "      y: 28.0\n"
   "      z: 0.0\n"
   "    }\n"
   "    rotation {\n"
@@ -61,8 +60,8 @@ embedded_components {
   "    index: 0\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 50.0\n"
-  "  data: 125.0\n"
+  "  data: 200.0\n"
+  "  data: 20.0\n"
   "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"

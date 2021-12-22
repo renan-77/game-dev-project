@@ -67,6 +67,46 @@ instances {
     z: 1.0
   }
 }
+instances {
+  id: "bat"
+  prototype: "/game/bat.go"
+  position {
+    x: 1655.0
+    y: 684.0
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "up_down_platform"
+  prototype: "/game/platforms/up_down_platform.go"
+  position {
+    x: 1137.0
+    y: 309.0
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "go"
