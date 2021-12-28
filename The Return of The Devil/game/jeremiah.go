@@ -40,7 +40,7 @@ embedded_components {
   "type: COLLISION_OBJECT_TYPE_KINEMATIC\n"
   "mass: 0.0\n"
   "friction: 0.1\n"
-  "restitution: 0.5\n"
+  "restitution: 0.0\n"
   "group: \"player\"\n"
   "mask: \"ground\"\n"
   "mask: \"platform\"\n"
@@ -67,7 +67,7 @@ embedded_components {
   "}\n"
   "linear_damping: 0.0\n"
   "angular_damping: 0.0\n"
-  "locked_rotation: false\n"
+  "locked_rotation: true\n"
   "bullet: false\n"
   ""
   position {
