@@ -22,8 +22,8 @@ embedded_components {
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
-    x: 0.0
-    y: 0.0
+    x: 1.0
+    y: 1.0
     z: 0.0
   }
   rotation {
@@ -36,11 +36,11 @@ embedded_components {
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"
-  data: "collision_shape: \"\"\n"
+  data: "collision_shape: \"/game/level.tilemap\"\n"
   "type: COLLISION_OBJECT_TYPE_KINEMATIC\n"
   "mass: 0.0\n"
-  "friction: 0.1\n"
-  "restitution: 0.5\n"
+  "friction: 1.0\n"
+  "restitution: 0.0\n"
   "group: \"platform\"\n"
   "mask: \"player\"\n"
   "embedded_collision_shape {\n"

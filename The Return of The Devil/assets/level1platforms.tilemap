@@ -1,0 +1,22 @@
+tile_set: "/assets/platform.tilesource"
+layers {
+  id: "layer1"
+  z: 1.0
+  is_visible: 1
+  cell {
+    x: 4
+    y: 2
+    tile: 0
+    h_flip: 0
+    v_flip: 0
+  }
+  cell {
+    x: 6
+    y: 5
+    tile: 0
+    h_flip: 0
+    v_flip: 0
+  }
+}
+material: "/builtins/materials/tile_map.material"
+blend_mode: BLEND_MODE_ALPHA
