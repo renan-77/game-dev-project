@@ -85,7 +85,7 @@ embedded_components {
 embedded_components {
   id: "sound"
   type: "sound"
-  data: "sound: \"/assets/music/Dark Intro.wav\"\n"
+  data: "sound: \"/assets/music/caves-of-dawn.ogg\"\n"
   "looping: 1\n"
   "group: \"master\"\n"
   "gain: 1.0\n"
