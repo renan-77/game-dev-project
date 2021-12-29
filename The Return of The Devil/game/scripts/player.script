@@ -23,6 +23,7 @@ local anim_idle = hash("stand")
 local anim_jump = hash("walk_right")
 local anim_fall = hash("walk_right")
 local RESPAWN = hash("restart")
+local spike = hash("spike")
 
 
 function init(self)
@@ -140,6 +141,8 @@ function on_message(self, message_id, message, sender)
 			handle_obstacle_contact(self, message.normal, message.distance)
 		elseif message.group == RESPAWN then
 			go.set_position(self.spawn_position) -- code to set new position of player
+		elseif message.group == spike then
+			go.set_position(self.spawn_position)
 		end
 	end
 end
