@@ -22,16 +22,21 @@ local anim_walk = hash("walk_right")
 local anim_idle = hash("stand")
 local anim_jump = hash("walk_right")
 local anim_fall = hash("walk_right")
+local respawn = hash("respawn")
 
 
 function init(self)
 	-- this lets us handle input in this script
+
+	
 	
 	msg.post(".", "acquire_input_focus")
 	msg.post("#sound", "play_sound")
 	-- activate camera attached to the player collection
 	-- this will send camera updates to the render script
 	msg.post("camera", "acquire_camera_focus")
+
+	self.spawn_position = go.get_position()
 
 	-- initial player velocity
 	self.velocity = vmath.vector3(0, 0, 0)
@@ -133,6 +138,8 @@ function on_message(self, message_id, message, sender)
 		-- check that the object is something we consider an obstacle
 		if message.group == group_obstacle then
 			handle_obstacle_contact(self, message.normal, message.distance)
+		elseif message.group == respawn then
+			go.set_position(self.spawn_position)
 		end
 	end
 end

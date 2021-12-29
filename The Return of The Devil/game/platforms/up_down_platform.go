@@ -1,6 +1,6 @@
 components {
   id: "collision"
-  component: "/game/scripts/collision.script"
+  component: "/game/scripts/up_down_moving_platform.script"
   position {
     x: 0.0
     y: 0.0
