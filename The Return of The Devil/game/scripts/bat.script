@@ -1,0 +1,16 @@
+function init(self)
+	self.center = vmath.vector3(360, 360, 0) -- 
+	self.radius = 160 -- 
+	self.speed = 2 -- 
+	self.t = 0 -- 
+end
+
+function update(self, dt)
+	self.t = self.t + dt -- 
+	local dx = math.sin(self.t * self.speed) * self.radius -- 
+	local dy = math.cos(self.t * self.speed) * self.radius
+	local pos = vmath.vector3() -- 
+	pos.x = self.center.x + dx -- 
+	pos.y = self.center.y + dy
+	go.set_position(pos) -- 
+end
