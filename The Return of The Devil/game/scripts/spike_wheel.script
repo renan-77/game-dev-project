@@ -1,0 +1,8 @@
+function init(self)
+	self.rotation = 0
+end
+
+function update(self, dt)
+	self.rotation = self.rotation + 10 * dt
+	go.set(".", "euler.z", self.rotation)
+end
