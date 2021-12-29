@@ -1,26 +1,27 @@
--- Initial Script Properties
---go.property("moving", true)
---go.property("newSpeed", 0)
-
 function init(self)
-	--self.velocity = vmath.vector3(self.newSpeed, 0, 0)	-- Initial Block Speed
-	local xPos = go.get_position().x
-	go.animate('.', "position.x", go.PLAYBACK_LOOP_PINGPONG, xPos + 480, go.EASING_LINEAR, 5)
+	-- Add initialization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
 end
 
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
 
 function update(self, dt)
-
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
 end
 
-
 function on_message(self, message_id, message, sender)
-	-- Stop block once it collides
-	--if message_id == hash("stop") then
-	--self.velocity = vmath.vector3(0, 0, 0)
-	--self.moving = false
-	--BLOCKACTIVE = false
-
+	-- check for the message
+	if message_id == hash("collision_response") then
+		print("HIT!")
+		print("I collided with", message.other_id)
+	end
 end
 
 function on_input(self, action_id, action)

@@ -45,6 +45,7 @@ embedded_components {
   "mask: \"ground\"\n"
   "mask: \"platform\"\n"
   "mask: \"restart\"\n"
+  "mask: \"spike\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"

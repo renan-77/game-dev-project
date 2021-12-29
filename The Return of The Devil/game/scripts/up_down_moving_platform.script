@@ -5,7 +5,7 @@
 function init(self)
 	--self.velocity = vmath.vector3(self.newSpeed, 0, 0)	-- Initial Block Speed
 	local xPos = go.get_position().x
-	go.animate('.', "position.y", go.PLAYBACK_LOOP_PINGPONG, xPos - 100, go.EASING_LINEAR, 5)
+	go.animate('.', "position.y", go.PLAYBACK_LOOP_PINGPONG, xPos - 400, go.EASING_LINEAR, 5)
 end
 
 

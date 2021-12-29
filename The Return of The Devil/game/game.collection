@@ -102,6 +102,46 @@ instances {
     z: 1.0
   }
 }
+instances {
+  id: "up_down_platform1"
+  prototype: "/game/platforms/up_down_platform.go"
+  position {
+    x: 710.0
+    y: 688.0
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "small_spike"
+  prototype: "/game/spikes/small_spike.go"
+  position {
+    x: 1472.0
+    y: 188.0
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "level"
