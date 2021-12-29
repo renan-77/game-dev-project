@@ -1,3 +1,5 @@
+local player = hash("player")
+
 function init(self)
 	self.center = vmath.vector3(360, 360, 0) -- 
 	self.radius = 160 -- 
@@ -13,4 +15,15 @@ function update(self, dt)
 	pos.x = self.center.x + dx -- 
 	pos.y = self.center.y + dy
 	go.set_position(pos) -- 
+end
+
+function on_message(self, message_id, message, sender)
+	-- check if we received a contact point message
+	if message_id == msg_contact_point_response then
+		-- check that the object is something we consider an obstacle
+		if message.group == player then
+			print("HIT PLAYER")
+			go.delete()
+		end
+	end
 end

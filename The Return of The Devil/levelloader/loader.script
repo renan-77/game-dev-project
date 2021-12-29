@@ -18,4 +18,9 @@ function on_message(self, message_id, message, sender)
 		unload_menu(self)
 		load_main(self)
 	end
+
+	if message_id == hash("retry") then
+		unload_menu(self)
+		load_main(self)
+	end
 end

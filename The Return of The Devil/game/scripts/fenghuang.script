@@ -1,46 +1,16 @@
-go.property("speed", 350) -- <1>
-
-function init(self)
-	msg.post(".", "acquire_input_focus") -- <2>
-
-	local current_pos = go.get_position() -- <4>
-	local target_pos = vmath.vector3(action.x, action.y, 0) -- <5>
-	local distance = vmath.length(target_pos - current_pos) -- <6>
-	local duration = distance / self.speed -- <7>
-	
-	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, target_pos, go.EASING_LINEAR, duration, 0) -- <8>
-end
-
-function on_input(self, action_id, action)
-	-- if action_id == hash("touch") or not action_id then -- <3>
-	-- 	local current_pos = go.get_position() -- <4>
-	-- 	local target_pos = vmath.vector3(action.x, action.y, 0) -- <5>
-	-- 	local distance = vmath.length(target_pos - current_pos) -- <6>
-	-- 	local duration = distance / self.speed -- <7>
-	-- 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, target_pos, go.EASING_LINEAR, duration, 0) -- <8>
-	-- end
-end
-
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
-end
+-- function init(self)
+-- 	self.center = vmath.vector3(360, 360, 1) -- 
+-- 	self.radius = 160 -- 
+-- 	self.speed = 2 -- 
+-- 	self.t = 1 -- 
+-- end
+-- 
+-- function update(self, dt)
+-- 	self.t = self.t + dt -- 
+-- 	local dx = math.sin(self.t * self.speed) * self.radius -- 
+-- 	local dy = math.cos(self.t * self.speed) * self.radius
+-- 	local pos = vmath.vector3() -- 
+-- 	pos.x = self.center.x + dx -- 
+-- 	pos.y = self.center.y + dy
+-- 	go.set_position(pos) -- 
+-- end

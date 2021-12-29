@@ -47,6 +47,7 @@ embedded_components {
   "mask: \"restart\"\n"
   "mask: \"spike\"\n"
   "mask: \"devil\"\n"
+  "mask: \"bat\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"

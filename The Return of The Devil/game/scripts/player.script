@@ -25,7 +25,9 @@ local anim_fall = hash("walk_right")
 local RESPAWN = hash("restart")
 local spike = hash("spike")
 local devil = hash("devil")
-
+local bat = hash("bat")
+local points = 0
+local points_goal = 3
 
 function init(self)
 	-- this lets us handle input in this script
@@ -146,7 +148,15 @@ function on_message(self, message_id, message, sender)
 			go.set_position(self.spawn_position)
 		elseif message.group == devil then
 			go.set_position(self.spawn_position)
+		elseif message.group == bat then
+			msg.post("loader#loader", "retry")
+			points = points + 1
+			print(points)
+			
 		end
+	end
+	if points == points_goal then
+		print("You won!")
 	end
 end
 
