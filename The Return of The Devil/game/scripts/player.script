@@ -24,6 +24,7 @@ local anim_jump = hash("walk_right")
 local anim_fall = hash("walk_right")
 local RESPAWN = hash("restart")
 local spike = hash("spike")
+local devil = hash("devil")
 
 
 function init(self)
@@ -142,6 +143,8 @@ function on_message(self, message_id, message, sender)
 		elseif message.group == RESPAWN then
 			go.set_position(self.spawn_position) -- code to set new position of player
 		elseif message.group == spike then
+			go.set_position(self.spawn_position)
+		elseif message.group == devil then
 			go.set_position(self.spawn_position)
 		end
 	end

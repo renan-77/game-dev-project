@@ -88,7 +88,7 @@ instances {
   prototype: "/game/platforms/up_down_platform.go"
   position {
     x: 1137.0
-    y: 309.0
+    y: 368.0
     z: 1.0
   }
   rotation {
@@ -108,7 +108,7 @@ instances {
   prototype: "/game/platforms/up_down_platform.go"
   position {
     x: 710.0
-    y: 688.0
+    y: 926.0
     z: 1.0
   }
   rotation {
@@ -140,6 +140,46 @@ instances {
   scale3 {
     x: 1.0
     y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_wheel"
+  prototype: "/game/spikes/spike_wheel.go"
+  position {
+    x: 1151.0
+    y: 960.0
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "fenghuang"
+  prototype: "/game/fenghuang.go"
+  position {
+    x: 2537.0
+    y: 424.0
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 6.217
+    y: 6.258
     z: 1.0
   }
 }
@@ -275,68 +315,6 @@ embedded_instances {
   position {
     x: 1456.0
     y: 591.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-  id: "go1"
-  data: "components {\n"
-  "  id: \"level1platforms\"\n"
-  "  component: \"/assets/level1platforms.tilemap\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"collisionobject\"\n"
-  "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"/assets/level1platforms.tilemap\\\"\\n"
-  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
-  "mass: 0.0\\n"
-  "friction: 0.1\\n"
-  "restitution: 0.5\\n"
-  "group: \\\"ground\\\"\\n"
-  "mask: \\\"player\\\"\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: false\\n"
-  "bullet: false\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 34.0
-    y: 34.0
     z: 0.0
   }
   rotation {
